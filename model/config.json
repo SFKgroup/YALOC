@@ -1,0 +1,43 @@
+{
+     "model_algorithm": "image_classification",
+     "model_type": "MindSpore",
+     "runtime": "mindspore_1.7.0-cpu-py_3.7-ubuntu_18.04-x86_64",
+     "apis": [{
+             "procotol": "https",
+             "url": "/",
+             "method": "post",
+             "request": {
+                 "Content-type": "multipart/form-data",
+                 "data": {
+                     "type": "object",
+                     "properties": {
+                         "images": {
+                             "type": "file"
+                         }
+                     }
+                 }
+             },
+             "response": {
+                 "Content-type": "applicaton/json",
+                 "data": {
+                     "type": "object",
+                     "properties": {
+                         "result": {
+                             "type": "array",
+             "item": [{
+                "type": "string"
+                         }]
+                         }
+                     }
+                 }
+             }
+         }
+     ],
+     "metrics": {
+         "f1": 0.124555,
+         "recall": 0.171875,
+         "precision": 0.0023493892851938493,
+         "accuracy": 0.00746268656716417
+     },
+    "dependencies": []
+ }
